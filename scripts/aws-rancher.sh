@@ -6,7 +6,6 @@
 
 if [[ $(id -u) != 0  ]]; then
   echo "please run as root user"
-  exit 1
 fi
 
 function aws-system-update() {
@@ -50,7 +49,7 @@ function aws-init() {
   aws-system-update
   aws-install-tools
   aws-shell-setup
-  aws-install docker
+  aws-install-docker
   aws-install-rancher
 }
 
